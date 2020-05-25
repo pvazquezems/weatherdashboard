@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's Up Weather</title>
+  <!-- LINK TO EXTERNAL STYLE SHEET (FOUNDATION.CSS)-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <!-- LINK TO LOCAL STYLE SHEET-->  
+  <link rel="stylesheet" href="style.css"/>  
+</head>
+<!-- TOP BAR BEGIN-->
+<header>
+  <div class="top-bar">
+    <h3 class="float-center">What's Up Weather?</h3>
+  </div>
+</header>
+<!-- TOP BAR END-->
+<!-- BODY CONTENT BEGIN-->
+<body>
+<!--FORM BEGIN-->    
+  <form id="cityForm">
+    <div class="grid-container">
+<!--PLACED CARDS INSIDE A GRID -->        
+      <div class="grid-x grid-padding-x">
+        <div class="medium-6 cell float-center">
+<!--PRESENT DAY WEATHER DISPLAYED BELOW-->            
+          <label for="cities">
+            <h3>Search City</h3>
+          </label>
+          <input type="text" id="submitCity" placeholder="Search City" name="search">
+          <button id="btn-searchCity" type="submit" class="button primary"> SEARCH </button>
+        </div>
+      </div>
+      <div class="card float-center">
+        <div class="card-divider float-center" id="weatherToday">
+<!-- INFO IS DISPLAYED IN AN UL WITH NO STYLING AND LI FOR ALL DATES-->             
+          <ul>
+            <li><h3>Current Weather</h3></li>
+            <li><h4 id="currentCity"></h4></li>
+            <li id="fechaToday"></li>
+            <li id="Temp"></li>
+            <li id="Humidity"></li>
+            <li id="Wind"></li>
+            <li id="uvIndex"></li>
+          </ul>
+        </div>
+<!--END PRESENT DAY DISPLAY-->      
+<!--DIV THAT WILL CARRY PREVIOUSLY SEARCHED CITY BUTTONS-->  
+        <div class="card-section text-center">
+            <h4>Previous Searches</h4>
+          <ul id="searchedList">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </form>
+<!-- DISPLAY FOR 5 DAY FORECAST-->
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x small-up-1 medium-up-3">
+      <div class="cell">
+<!-- DATE 1 DISPLAY CARD-->          
+        <div class="card">
+          <div class="card-section">
+            <ul>
+              <li>
+                <h3 id="dateOne"></h3>
+              </li>
+              <li id="tempOne"></li>
+              <li id="fechaOne"></li>
+              <li id="humidOne"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+<!-- DATE 2 DISPLAY CARD-->           
+        <div class="card">
+          <div class="card-section">
+            <ul>
+              <li>
+                <h3 id="dateTwo"></h3>
+              </li>
+              <li id="tempTwo"></li>
+              <li id="fechaTwo"></li>
+              <li id="humidTwo"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+<!-- DATE 3 DISPLAY CARD-->           
+        <div class="card">
+          <div class="card-section">
+            <ul>
+              <li>
+                <h3 id="dateThree"></h3>
+              </li>
+              <li id="tempThree"></li>
+              <li id="fechaThree"></li>
+              <li id="humidThree"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x small-up-1 medium-up-2">
+          <div class="cell">
+<!-- DATE 4 DISPLAY CARD-->               
+            <div class="card">
+              <div class="card-section">
+                <ul>
+                  <li>
+                    <h3 id="dateFour"></h3>
+                  </li>
+                  <li id="tempFour"></li>
+                  <li id="fechaFour"></li>
+                  <li id="humidFour"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+<!-- DATE 5 DISPLAY CARD-->               
+            <div class="card">
+              <div class="card-section">
+                <ul>
+                  <li>
+                    <h3 id="dateFive"></h3>
+                  </li>
+                  <li id="tempFive"></li>
+                  <li id="fechaFive"></li>
+                  <li id="humidFive"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- JAVASCRIPT FILES LINKS BELOW--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+<!--END BODY CONTENT--> 
+</html>

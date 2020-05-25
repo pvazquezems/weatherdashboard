@@ -1,0 +1,26 @@
+li {
+    text-align: center; 
+  }
+
+  ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .classOne {
+    background-color: rgb(114, 236, 114);
+  }
+
+  .classTwo {
+    background-color: rgb(241, 241, 128);
+  }
+
+  .classThree {
+    background-color: rgb(250, 176, 37);
+  }
+
+  .classFour {
+    background-color: rgb(240, 34, 34);
+  }
+
+  
