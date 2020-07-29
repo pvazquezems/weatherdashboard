@@ -29,13 +29,6 @@ $(document).ready(function () {
         // PUT INFO IN A LIST AND THEN CREATE A BUTTON WITH A CLASS TO BE CLICKABLE 
             let listSearched = $("<button>").text(displayCity).addClass("button secondary");
             $("#searchedList").append(listSearched);
-            function cityButtons() {
-                // PLACING CITY VALUE INSIDE THIS.
-                let city = $(this)[0].innerHTML;
-               //THIS FUNCTION WAS SUPPOSE TO TAKE IN PREVIOUS CITIES SEARCHED AND PLACE THEM INSIDE WEATHERAPI() TO DISPLAY INFO.
-                weatherApi(city);
-            }    
-            $(".button secondary").on("click", cityButtons);
         }
     }
     // MY API KEY TO BE PLACED IN THE AJAX CALL
@@ -128,5 +121,14 @@ $(document).ready(function () {
             });
     } 
 // END OF UV INDEX FUNCTION
+    
+     function cityButtons() {
+                // PLACING CITY VALUE INSIDE THIS.
+                let city = $(this)[0].innerHTML;
+               //THIS FUNCTION WAS SUPPOSE TO TAKE IN PREVIOUS CITIES SEARCHED AND PLACE THEM INSIDE WEATHERAPI() TO DISPLAY INFO.
+                weatherApi(city);
+            }    
+            $(".button secondary").on("click", cityButtons);
+    
     searchedList();
 });
